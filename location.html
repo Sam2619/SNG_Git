@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Spices N Grains</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/social-buttons.css">
+    <link rel="stylesheet" type="text/css" href="CSS/font-awesome-4.4.0/css/font-awesome.min.css">
+
+
+    <script type="text/javascript" src=""></script>
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+
+    #map-canvas{
+      height: 450px;
+      width: 450px;
+     
+    }
+    </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+    <script>
+        function initialize() {
+          var myLatlng = new google.maps.LatLng(38.7584067,-90.5355979);
+          var mapOptions = {
+            zoom: 18,
+            center: myLatlng
+          }
+          var name = 'SpicesNGrains';
+
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var marker = new google.maps.Marker({position: myLatlng, map:map, title:name});
+
+        var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+
+         
+      }
+
+     
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+
+<body>
+            
+
+  <div class="container">
+<header id="hh">
+  <div class="social-buttons f-right ">
+      <!-- For diaglog box -->
+            <div id="dialogoverlay"></div>
+            <div id="dialogbox">
+              <div>
+                <div id="dialogboxhead"></div>
+                <div id="dialogboxbody"></div>
+                <div id="dialogboxfoot"></div>
+              </div>
+            </div>
+      <!--- -->
+            <a class="social-button facebook fa fa-facebook" href="https://www.facebook.com/NewSpicesNGrains" target="_blank" style="font-style: italic"><i class="fa fa-facebook"></i>
+            </a> 
+            <a id="mail" class="social-button envelope fa fa-envelope" href="#" onClick="alert('newspicesngrains@gmail.com')" style="font-style: italic"><i class="fa fa-envelope"></i>
+            </a> 
+            <a id="phone" class="social-button phone fa fa-phone" href="#" onClick="alert('(636)352-1204')" style="font-style: italic"><i class="fa fa-phone"></i>
+            </a>
+  </div>
+
+
+   <div class="mainTitleDiv">
+         <p class="mainTitle" style="display:inline-block">
+          <img id="NewIcon" src="Images/new.gif">Spices N Grains 
+          </p>    
+        
+        <ul class="nav nav-pills pills-custom" style="display:inline-block;float:right">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="specials.html">Specials</a></li>
+              <li class="active"><a href="location.html">Location</a></li>
+        </ul>
+        
+    </div>
+</header> 
+
+<body>
+      <div id="map-canvas"></div>
+      <div id="addr">
+        <p><b>Address:</b><br>2157 Bluestone Dr,<br>St Charles,<br>MO 63303</p>
+        <p>Very near to Saint Charles Stadium 18(Wehrenberg Movie Theaters).</p>
+
+      </div>
+
+  </body>
+</html>
